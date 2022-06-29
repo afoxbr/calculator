@@ -1,0 +1,54 @@
+.body {
+    font-family: 'Courier New', monospace;
+}
+
+.device {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px black;
+    border-radius: 10px;
+    margin: 12px;
+    padding: 12px;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d3d3d3;
+}
+
+.display {
+    width: 120px;
+    height: 50px;
+    display: flex;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: solid 2px black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: right;
+    padding: 5px;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.numButt {
+    display: flex;
+    flex-direction: column;
+}
+
+.opButt {
+    display:flex;
+    flex-direction: column;
+    margin-left: auto;
+}
