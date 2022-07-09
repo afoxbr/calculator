@@ -1,4 +1,4 @@
-let display = document.getElementById("display");
+const display = document.getElementById("display");
 const num0 = document.getElementById("0");
 const num1 = document.getElementById("1");
 const num2 = document.getElementById("2");
@@ -18,8 +18,6 @@ const clear = document.getElementById("clear");
 const decimal = document.getElementById("decimal");
 
 const calcObj = {};
-
-display.textContent = "0";
 
 num1.addEventListener("click", () => {
   if (!(operator in calcObj)){
@@ -197,36 +195,91 @@ decimal.addEventListener("click", () => {
   };
 });
 
+add.addEventListener("click", ()=> {
+  if (!(operator in calcObj)){
+    operator = "+";
+  } else if (operator in calcObj) {
+    operate(calcObj);
+    oper1 = product;
+    operator = "+";
+  };
+});
+
+subtract.addEventListener("click", ()=> {
+  if (!(operator in calcObj)){
+    operator = "-";
+  } else if (operator in calcObj) {
+    operate(calcObj);
+    oper1 = product;
+    operator = "-";
+  };
+});
+
+divide.addEventListener("click", ()=> {
+  if (!(operator in calcObj)){
+    operator = "/";
+  } else if (operator in calcObj) {
+    operate(calcObj);
+    oper1 = product;
+    operator = "/";
+  };
+});
+
+multiply.addEventListener("click", ()=> {
+  if (!(operator in calcObj)){
+    operator = "*";
+  } else if (operator in calcObj) {
+    operate(calcObj);
+    oper1 = product;
+    operator = "*";
+  };
+});
+
+equals.addEventListener("click", () => {
+  operate(calcObj);
+});
+
+clear.addEventListener("click", () => {
+  delete calcObj.oper1;
+  delete calcObj,oper2;
+  delete calcObj.operator;
+  delete calcObj.product;
+  display.textContent = "0";
+})
+
 function add(a, b) {
-  return (a + b);
+  return (a + b).toFixed(2);
 };
 
 function subtract(a, b) {
-  return (a - b);
+  return (a - b).toFixed(2);
 };
 
 function multiply(a, b) {
-  return (a * b);
+  return (a * b).toFixed(2);
 };
 
 function divide(a, b) {
   if (oper2 == "0"){
     return "Absolutely not.";
   } else {
-    return (a / b);
+    return (a / b).toFixed(2);
   };
 };
 
 function operate(calcObj){
-  if (operator == "+") {
-    return add(calcObj.oper1, calcObj.oper2);
-  } else if (operator == "-") {
-    return subtract(calcObj.oper1, calcObj.oper2);
-  } else if (operator == "*") {
-    return multiply(calcObj.oper1, calcObj.oper2);
-  }else if (operator == "/") {
-    return divide(calcObj.oper1, calcObj.oper2);
+  if (calcObj.operator == "+") {
+    calcObj.product = add(parseFloat(calcObj.oper1), parseFloat(calcObj.oper2));
+  } else if (calcObj.operator == "-") {
+    calcObj.product = subtract(parseFloat(calcObj.oper1), parseFloat(calcObj.oper2));
+  } else if (calcObj.operator == "*") {
+    calcObj.product = multiply(parseFloat(calcObj.oper1), parseFloat(calcObj.oper2));
+  }else if (calcObj.operator == "/") {
+    calcObj.product = divide(parseFloat(calcObj.oper1), parseFloat(calcObj.oper2));
   } else {
     return "error";
   };
+  delete calcObj.oper1;
+  delete calcObj.oper2;
+  delete calcObj.operator;
 };
