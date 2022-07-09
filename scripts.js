@@ -9,10 +9,10 @@ const num6 = document.getElementById("6");
 const num7 = document.getElementById("7");
 const num8 = document.getElementById("8");
 const num9 = document.getElementById("9");
-const add = document.getElementById("add");
-const subtract = document.getElementById("subtract");
-const multiply = document.getElementById("multiply");
-const divide = document.getElementById("divide");
+const addButt = document.getElementById("add");
+const subtractButt = document.getElementById("subtract");
+const multiplyButt = document.getElementById("multiply");
+const divideButt = document.getElementById("divide");
 const equals = document.getElementById("equals");
 const clear = document.getElementById("clear");
 const decimal = document.getElementById("decimal");
@@ -20,218 +20,233 @@ const decimal = document.getElementById("decimal");
 const calcObj = {};
 
 num1.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "1";
+  display.textContent += "1";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "1";
     } else {
-      oper1 += "1";
+      calcObj.oper1 += "1";
     };
-  } else if ((operator in calcObj)){
-    if (!(oper2 in calcObj)){
-      oper2 = "1";
+  } else if ((calcObj.operator in calcObj)){
+    if (!(calcObj.oper2 in calcObj)){
+      calcObj.oper2 = "1";
     } else {
-      oper2 += "1";
+      calcObj.oper2 += "1";
     };
   };
 });
 
 num2.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "2";
+  display.textContent += "2";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "2";
     } else {
-      oper1 += "2";
+      calcObj.oper1 += "2";
     };
-  } else if ((operator in calcObj)){
-    if (!(oper2 in calcObj)){
-      oper2 = "2";
+  } else if ((calcObj.operator in calcObj)){
+    if (!(calcObj.oper2 in calcObj)){
+      calcObj.oper2 = "2";
     } else {
-      oper2 += "2";
+      calcObj.oper2 += "2";
     };
   };
 });
 
 num3.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "3";
+  display.textContent += "3";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "3";
     } else {
-      oper1 += "3";
+      calcObj.oper1 += "3";
     };
-  } else if ((operator in calcObj)){
-    if (!(oper2 in calcObj)){
-      oper2 = "3";
+  } else if ((calcObj.operator in calcObj)){
+    if (!(calcObj.oper2 in calcObj)){
+      calcObj.oper2 = "3";
     } else {
-      oper2 += "3";
+      calcObj.oper2 += "3";
     };
   };
 });
 
 num4.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "4";
+  display.textContent += "4";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "4";
     } else {
-      oper1 += "4";
+      calcObj.oper1 += "4";
     };
-  } else if ((operator in calcObj)){
-    if (!(oper2 in calcObj)){
-      oper2 = "4";
+  } else if ((calcObj.operator in calcObj)){
+    if (!(calcObj.oper2 in calcObj)){
+      calcObj.oper2 = "4";
     } else {
-      oper2 += "4";
+      calcObj.oper2 += "4";
     };
   };
 });
 
 num5.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "5";
+  display.textContent += "5";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "5";
     } else {
-      oper1 += "5";
+      calcObj.oper1 += "5";
     };
-  } else if ((operator in calcObj)){
-    if (!(oper2 in calcObj)){
-      oper2 = "5";
+  } else if ((calcObj.operator in calcObj)){
+    if (!(calcObj.oper2 in calcObj)){
+      calcObj.oper2 = "5";
     } else {
-      oper2 += "5";
+      calcObj.oper2 += "5";
     };
   };
 });
 
 num6.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "6";
+  display.textContent += "6";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "6";
     } else {
-      oper1 += "6";
+      calcObj.oper1 += "6";
     };
-  } else if ((operator in calcObj)){
+  } else if ((calcObj.operator in calcObj)){
     if (!(oper2 in calcObj)){
-      oper2 = "6";
+      calcObj.oper2 = "6";
     } else {
-      oper2 += "6";
+      calcObj.oper2 += "6";
     };
   };
 });
 
 num7.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "7";
+  display.textContent += "7";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "7";
     } else {
-      oper1 += "7";
+      calcObj.oper1 += "7";
     };
-  } else if ((operator in calcObj)){
-    if (!(oper2 in calcObj)){
-      oper2 = "7";
+  } else if ((calcObj.operator in calcObj)){
+    if (!(calcObj.oper2 in calcObj)){
+      calcObj.oper2 = "7";
     } else {
-      oper2 += "7";
+      calcObj.oper2 += "7";
     };
   };
 });
 
 num8.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "8";
+  display.textContent += "8";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "8";
     } else {
-      oper1 += "8";
+      calcObj.oper1 += "8";
     };
-  } else if ((operator in calcObj)){
-    if (!(oper2 in calcObj)){
-      oper2 = "8";
+  } else if ((calcObj.operator in calcObj)){
+    if (!(calcObj.oper2 in calcObj)){
+      calcObj.oper2 = "8";
     } else {
-      oper2 += "8";
+      calcObj.oper2 += "8";
     };
   };
 });
 
 num9.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "9";
+  display.textContent += "9";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "9";
     } else {
-      oper1 += "9";
+      calcObj.oper1 += "9";
     };
-  } else if ((operator in calcObj)){
+  } else if ((calcObj.operator in calcObj)){
     if (!(oper2 in calcObj)){
-      oper2 = "9";
+      calcObj.oper2 = "9";
     } else {
-      oper2 += "9";
+      calcObj.oper2 += "9";
     };
   };
 });
 
 num0.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calc.obj)){
-      oper1 = "0";
+  display.textContent += "0";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "0";
     } else {
-      oper1 += "0";
+      calcObj.oper1 += "0";
     };
-  } else if ((operator in calcObj)){
-    if (!(oper2 in calcObj)){
-      oper2 = "0";
+  } else if ((calcObj.operator in calcObj)){
+    if (!(calcObj.oper2 in calcObj)){
+      calcObj.oper2 = "0";
     } else {
-      oper2 += "0";
+      calcObj.oper2 += "0";
     };
   };
 });
 
 decimal.addEventListener("click", () => {
-  if (!(operator in calcObj)){
-    if (!(oper1 in calcObj)){
-      oper1 = "0.";
+  display.textContent += ".";
+  if (!(calcObj.operator in calcObj)){
+    if (!(calcObj.oper1 in calcObj)){
+      calcObj.oper1 = "0.";
     } else {
-      oper1 += ".";
+      calcObj.oper1 += ".";
     };
-  } else if ((operator in calcObj)){
-    if (!(oper2 in calcObj)){
-      oper2 = "0.";
+  } else if ((calcObj.operator in calcObj)){
+    if (!(calcObj.oper2 in calcObj)){
+      calcObj.oper2 = "0.";
     } else {
-      oper2 += "."
+      calcObj.oper2 += "."
     };
   };
 });
 
-add.addEventListener("click", ()=> {
-  if (!(operator in calcObj)){
-    operator = "+";
-  } else if (operator in calcObj) {
+addButt.addEventListener("click", ()=> {
+  display.textContent += "+";
+  if (!(calcObj.operator in calcObj)){
+    calcObj.operator = "+";
+  } else if (calcObj.operator in calcObj) {
     operate(calcObj);
-    oper1 = product;
-    operator = "+";
+    calcObj.oper1 = calcObj.product;
+    calcObj.operator = "+";
   };
 });
 
-subtract.addEventListener("click", ()=> {
-  if (!(operator in calcObj)){
-    operator = "-";
-  } else if (operator in calcObj) {
+subtractButt.addEventListener("click", ()=> {
+  display.textContent += "-";
+  if (!(calcObj.operator in calcObj)){
+    calcObj.operator = "-";
+  } else if (calcObj.operator in calcObj) {
     operate(calcObj);
-    oper1 = product;
-    operator = "-";
+    calcObj.oper1 = calcObj.product;
+    calcObj.operator = "-";
   };
 });
 
-divide.addEventListener("click", ()=> {
-  if (!(operator in calcObj)){
-    operator = "/";
-  } else if (operator in calcObj) {
+divideButt.addEventListener("click", ()=> {
+  display.textContent += "/";
+  if (!(calcObj.operator in calcObj)){
+    calcObj.operator = "/";
+  } else if (calcObj.operator in calcObj) {
     operate(calcObj);
-    oper1 = product;
-    operator = "/";
+    calcObj.oper1 = calcObj.product;
+    calcObj.operator = "/";
   };
 });
 
-multiply.addEventListener("click", ()=> {
-  if (!(operator in calcObj)){
-    operator = "*";
-  } else if (operator in calcObj) {
+multiplyButt.addEventListener("click", ()=> {
+  display.textContent += "*";
+  if (!(calcObj.operator in calcObj)){
+    calcObj.operator = "*";
+  } else if (calcObj.operator in calcObj) {
     operate(calcObj);
-    oper1 = product;
-    operator = "*";
+    calcObj.oper1 = calcObj.product;
+    calcObj.operator = "*";
   };
 });
 
@@ -241,10 +256,10 @@ equals.addEventListener("click", () => {
 
 clear.addEventListener("click", () => {
   delete calcObj.oper1;
-  delete calcObj,oper2;
+  delete calcObj.oper2;
   delete calcObj.operator;
   delete calcObj.product;
-  display.textContent = "0";
+  display.textContent = "";
 })
 
 function add(a, b) {
@@ -282,4 +297,5 @@ function operate(calcObj){
   delete calcObj.oper1;
   delete calcObj.oper2;
   delete calcObj.operator;
+  display.textContent = String(calcObj.product);
 };
