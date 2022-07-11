@@ -41,7 +41,7 @@ function multiply(a, b) {
 };
 
 function divide(a, b) {
-  if (oper2 == 0) {
+  if (b == 0) {
     return "Absolutely not.";
   } else {
     let c = a / b;
@@ -259,45 +259,49 @@ decimal.addEventListener("click", () => {
 
 addButt.addEventListener("click", () => {
   display.textContent += "+";
-  if (!(calcObj.operator in calcObj)) {
+  if (!("operator" in calcObj)) {
     calcObj.operator = "+";
-  } else if (calcObj.operator in calcObj) {
-    operate(calcObj);
+  } else if ("operator" in calcObj) {
+    operate();
     calcObj.oper1 = calcObj.product;
     calcObj.operator = "+";
+    display.textContent += "+";
   };
 });
 
 subtractButt.addEventListener("click", () => {
   display.textContent += "-";
-  if (!(calcObj.operator in calcObj)) {
+  if (!("operator" in calcObj)) {
     calcObj.operator = "-";
-  } else if (calcObj.operator in calcObj) {
-    operate(calcObj);
+  } else if ("operator" in calcObj) {
+    operate();
     calcObj.oper1 = calcObj.product;
     calcObj.operator = "-";
+    display.textContent += "-";
   };
 });
 
 divideButt.addEventListener("click", () => {
   display.textContent += "/";
-  if (!(calcObj.operator in calcObj)) {
+  if (!("operator" in calcObj)) {
     calcObj.operator = "/";
-  } else if (calcObj.operator in calcObj) {
-    operate(calcObj);
+  } else if ("operator" in calcObj) {
+    operate();
     calcObj.oper1 = calcObj.product;
     calcObj.operator = "/";
+    display.textContent += "/";
   };
 });
 
 multiplyButt.addEventListener("click", () => {
   display.textContent += "*";
-  if (!(calcObj.operator in calcObj)) {
+  if (!("operator" in calcObj)) {
     calcObj.operator = "*";
-  } else if (calcObj.operator in calcObj) {
-    operate(calcObj);
+  } else if ("operator" in calcObj) {
+    operate();
     calcObj.oper1 = calcObj.product;
     calcObj.operator = "*";
+    display.textContent += "*";
   };
 });
 
