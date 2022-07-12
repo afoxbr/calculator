@@ -51,23 +51,27 @@ function divide(a, b) {
 };
 
 function operate() {
-  calcObj.oper1 = parseFloat(calcObj.oper1);
-  calcObj.oper2 = parseFloat(calcObj.oper2);
-  if (calcObj.operator == "+") {
-    calcObj.product = add(calcObj.oper1, calcObj.oper2);
-  } else if (calcObj.operator == "-") {
-    calcObj.product = subtract(calcObj.oper1, calcObj.oper2);
-  } else if (calcObj.operator == "*") {
-    calcObj.product = multiply(calcObj.oper1, calcObj.oper2);
-  } else if (calcObj.operator == "/") {
-    calcObj.product = divide(calcObj.oper1, calcObj.oper2);
+  if (calcObj.oper2 == undefined){
+    return calcObj.oper1;
   } else {
-    return "error";
+    calcObj.oper1 = parseFloat(calcObj.oper1);
+    calcObj.oper2 = parseFloat(calcObj.oper2);
+    if (calcObj.operator == "+") {
+      calcObj.product = add(calcObj.oper1, calcObj.oper2);
+    } else if (calcObj.operator == "-") {
+      calcObj.product = subtract(calcObj.oper1, calcObj.oper2);
+    } else if (calcObj.operator == "*") {
+      calcObj.product = multiply(calcObj.oper1, calcObj.oper2);
+    } else if (calcObj.operator == "/") {
+      calcObj.product = divide(calcObj.oper1, calcObj.oper2);
+    } else {
+      return "error";
+    };
+    delete calcObj.oper1;
+    delete calcObj.oper2;
+    delete calcObj.operator;
+    display.textContent = calcObj.product;
   };
-  delete calcObj.oper1;
-  delete calcObj.oper2;
-  delete calcObj.operator;
-  display.textContent = calcObj.product;
 };
 
 num1.addEventListener("click", () => {
@@ -241,18 +245,21 @@ num0.addEventListener("click", () => {
 });
 
 decimal.addEventListener("click", () => {
-  display.textContent += ".";
   if (!("operator" in calcObj)) {
     if (!("oper1" in calcObj)) {
       calcObj.oper1 = "0.";
+      display.textContent = "0.";
     } else {
       calcObj.oper1 += ".";
+      display.textContent += ".";
     };
   } else if (("operator" in calcObj)) {
     if (!("oper2" in calcObj)) {
       calcObj.oper2 = "0.";
+      display.textContent += "0.";
     } else {
       calcObj.oper2 += "."
+      display.textContent += ".";
     };
   };
 });
